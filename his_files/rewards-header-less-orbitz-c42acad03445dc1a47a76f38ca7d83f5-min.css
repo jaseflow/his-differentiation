@@ -1,0 +1,12 @@
+#rewardsHeader{display:block;float:left;line-height:normal;vertical-align:middle;box-sizing:border-box;margin:0;margin-top:5px;margin-bottom:5px;padding:0;border:0}
+#rewardsHeader .rewardsBadge,#utility-menu .rewardsBadge{border-bottom-left-radius:4.58823537826538px;border-bottom-right-radius:4.58823537826538px;border-top-left-radius:4.58823537826538px;border-top-right-radius:4.58823537826538px;font-family:'Helvetica Neue',Arial,'Lucida Grande',sans-serif;font-weight:bold;margin:0}
+.rewardsBadge{background-color:#8e0099;color:white;border:0}
+#utility-menu .rewards{font-size:12px;padding-left:4px;padding-right:6px;padding-top:1px;padding-bottom:2px;margin-left:1px;margin-right:1px}
+#rewardsHeader a{padding:0;color:white;float:left}
+#rewardsHeader .rewardsBadge{float:left;display:inline-block;vertical-align:middle;margin:0 2px 2px 12px;box-sizing:border-box;font-size:13px;padding:3px 4px 4px 5px;font-style:normal;font-variant:normal;font-weight:bold;position:relative;top:5px}
+#rewardsHeader .amountDisplay{float:left;display:inline-block;vertical-align:middle;box-sizing:border-box;margin:0;padding:0;border:0;margin-left:2px;margin-right:2px;font-size:14px;font-family:'Helvetica Neue',Arial,'Lucida Grande',sans-serif;font-weight:bold;position:relative;top:7px;color:white}
+#rewardsHeader img{vertical-align:middle;margin:0;margin-left:0;margin-right:4px}
+#utility-menu.open .rewardsBadge{background:0}
+#utility-menu.open .amountDisplay{color:white}
+@media only screen and (max-width:533px){#rewardsHeader .amountDisplay,#rewardsHeader .rewardsBadge{display:none !important}
+}

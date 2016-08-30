@@ -1,0 +1,2 @@
+require(["spotlight","jquery"],function(a,b){try{b("#opm-floodlight").attr("src",a.opmFloodlightSrc),b("#meso-floodlight").attr("src",a.mesoFloodlightSrc)}catch(c){require("logger",function(a){a.logError("spotlight",c)})}});
+//# sourceMappingURL=spotlight.js.map

@@ -1,0 +1,15 @@
+#app-download-hotel-banner-container{position:relative;color:white;clear:both;display:flex;align-items:center;padding-top:.52941176em;padding-bottom:.52941176em}
+#app-download-hotel-banner-container.wotif{background-color:#1a7abf}
+#app-download-hotel-banner-container.lastminute{background-color:#a1266c}
+#app-download-hotel-banner-container .app-title{flex:1;padding-left:1em;font-weight:bold;font-stretch:condensed;font-family:sans-serif;line-height:1.2em;font-size:15px}
+#app-download-hotel-banner-container .app-title .app-tablet-msg{text-transform:uppercase}
+#app-download-hotel-banner-container .app-title *{color:#fff}
+#app-download-hotel-banner-container .app-store-logo{padding-right:.52941176em}
+#app-download-hotel-banner-container .app-store-logo img{width:auto;height:1.88235294em}
+#app-download-hotel-banner-container .pos-icon img{width:auto;height:1.88235294em}
+@media only screen and (max-width:45.375em){#app-download-hotel-banner-container .app-tablet-msg{display:none}
+}
+@media only screen and (orientation:landscape){#app-download-hotel-banner-container .app-title{font-size:18px}
+}
+#app-download-hotel-banner-container:after{content:"";display:table;clear:both}
+body.has-interstitial #app-download-hotel-banner-container{display:none}

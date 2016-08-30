@@ -1,0 +1,21 @@
+html .site-header{background:#00253c;border-top-color:#00b1ff !important}
+.site-header a,.site-header a:visited{color:#00b1ff}
+.site-header a:hover{color:#00b1ff}
+.site-header .selected-tab a,.site-header .selected-tab a:link,.site-header .selected-tab a:visited,.site-header .selected-tab a:hover,.site-header .selected-tab a:active{background:#00b1ff;color:#fff}
+.site-header .shop-nav .menu a:hover,.site-header .site-navigation .menu li a:hover{background:#0065b8;color:#fff}
+.site-header .cols-row{background:#00253c;color:#00b1ff}
+.site-header-primary{border-color:#c7c7c7;box-shadow:none}
+.xp-bx-boxedTitle{background:#00b1ff}
+.xp-bx-rndTitle-top{background:#00b1ff;background-image:none;width:0;height:0}
+.no-touch .site-header .menu a:hover,.no-touch .site-header .menu a:focus{background:#0065b8;color:#fff}
+#rewardsHeader{margin-top:0 !important}
+@media only screen and (max-width:770px){.site-header a#header-logo img{max-height:31px !important}
+}
+@media only screen and (max-width:533px){.site-header a#header-logo img{max-height:31px !important}
+}
+@media only screen and (max-width:480px){.site-header a#header-logo img{max-height:31px !important}
+}
+@media only screen and (max-width:400px){.site-header a#header-logo img{max-height:31px !important}
+}
+@media only screen and (max-width:320px){.site-header a#header-logo img{max-height:31px !important}
+}
