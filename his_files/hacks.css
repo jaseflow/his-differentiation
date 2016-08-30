@@ -1,0 +1,6 @@
+#tabs,
+.site-header .site-navigation,
+.site-content-wrap .sub-header,
+.mobile-language-links {
+    display: none !important;
+}
