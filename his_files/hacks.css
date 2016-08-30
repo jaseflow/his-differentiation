@@ -1,6 +1,7 @@
 #tabs,
 .site-header .site-navigation,
 .site-content-wrap .sub-header,
+.photos-and-reviews .summary-wrapper,
 .mobile-language-links {
     display: none !important;
 }

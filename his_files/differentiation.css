@@ -1,5 +1,6 @@
 html {
     --darkBlue: #00243d;
+    --lightBlue: #00AEFF;
 }
 
 .site-header-primary a#header-logo {
@@ -69,4 +70,113 @@ html {
 .sticky-nav a.active {
 	font-weight: 500;
     opacity: 1;
+}
+
+/* Flip title with gallery */
+
+.site-content {
+	position: relative;
+}
+
+.site-content .page-header {
+	position: absolute;
+    height: 76px;
+    background: var(--darkBlue);
+    /* Shift under gallery */
+    top: 180px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+.site-content .rating-new {
+	height: 76px;
+    width: 76px;
+    background: var(--lightBlue);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.25;
+}
+
+.site-content .rating-new strong {
+    display: block;
+	font-weight: 700;
+    font-size: 24px;
+}
+
+.site-content .rating-new span {
+    font-size: 15px;
+    display: block;
+}
+
+.site-content .page-header #license-plate {
+	flex: 1;
+    padding-left: 12px;
+    line-height: 1;
+}
+
+.site-content .page-header #license-plate .star-rating-wrapper {
+    display: block;
+    margin: 0;
+}
+
+.site-content .page-header #license-plate #hotel-name {
+    color: #fff;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.site-content .page-header #license-plate .address {
+    margin: 0 !Important;
+}
+
+.site-content .page-header #license-plate .address a {
+    color: var(--lightBlue);
+    font-size: 11px;
+    margin: 0;
+}
+
+.site-content .photos-and-reviews .jumbo-hero .hero {
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.site-content .photos-and-reviews figcaption {
+    display: none;
+}
+
+.site-content .photos-and-reviews #toggle-banner {
+	display: none;
+}
+
+.site-content .jumbo-wrapper {
+	margin-bottom: 76px;
+}
+
+
+/* Rooms and rates */
+
+#rooms-and-rates {
+	border: 0;
+    float: none;
+    margin: 0;
+}
+
+#rooms-and-rates #availability-header {
+    display: none;
+}
+
+#rooms-and-rates .search-form {
+	margin: 0 !Important;
 }
