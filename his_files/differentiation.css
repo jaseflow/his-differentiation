@@ -3,6 +3,14 @@ html {
     --lightBlue: #00AEFF;
 }
 
+body {
+	padding-bottom: 133px;
+}
+
+.site-header.site-header-primary {
+    border-bottom: 0;
+}
+
 .site-header-primary a#header-logo {
     display: block !important;
     float: none !important;
@@ -32,6 +40,7 @@ html {
 .site-header .back {
     display: flex;
     align-items: center;
+    line-height: 1;
 }
 
 .site-header .back .icon {
@@ -40,7 +49,16 @@ html {
 
 .site-header .back span {
     font-size: 12px;
-    line-height: 1.2;
+    margin-top: 1px;
+}
+.site-header-primary .off-canvas-btn {
+    height: 50px !important;
+    width: 50px;
+    line-height: 50px;
+    color: var(--lightBlue);
+    top: 0;
+    right: -12px !important;
+    margin: 0 !important;
 }
 
 /* Sticky nav */
@@ -185,6 +203,15 @@ html {
 
 /* Rooms and rates */
 
+@keyframes showWizard {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 #rooms-and-rates {
 	border: 0;
     float: none;
@@ -196,6 +223,8 @@ html {
     z-index: 200;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
     border-radius: 0;
+    transform: translateY(100%);
+    animation: showWizard 0.25s 1s ease forwards;
 }
 
 #rooms-and-rates #availability-header {
@@ -214,12 +243,15 @@ html {
 
 .ratings-new {
 	padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .ratings-new__title {
 	font-style: italic;
     font-size: 17px;
     font-weight: 400;
+    width: 100%;
 }
 
 .ratings-new__row {
@@ -228,6 +260,12 @@ html {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 12px;
+    width: 47.5%;
+}
+
+.ratings-new__row:nth-child(3),
+.ratings-new__row:nth-child(5) {
+    margin-left: 5%;
 }
 
 .ratings-new__label {
@@ -282,7 +320,7 @@ html {
     opacity: 0;
     position: fixed !important;
     width: 100%;
-    height: 310px;
+    height: 265px;
     padding: 0;
     right: auto !important;
     border: 0;
@@ -298,22 +336,29 @@ html {
     margin: 0;
 }
 
-#availability-wizard .datepicker-dropdown .datepicker-cal {
-    padding-top: 32px;
-}
-
 #availability-wizard .datepicker-dropdown .datepicker-cal .btn-paging.btn-secondary {
-    top: 43px;
+    color: var(--darkBlue);
 }
 
 #availability-wizard .datepicker-dropdown .datepicker-close {
-    top: 0;
-    height: 32px;
-    line-height: 32px;
+    display: block;
+	position: fixed;
+    display: block;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    bottom: 100%;
+    left: 0;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
 }
 
 #availability-wizard .datepicker-arrow:after {
 	display: none !important;
+}
+
+#availability-wizard .button-wrapper button {
+    text-transform: capitalize;
 }
 
 .exp11120-1 #availability-wizard #availability-check-in-label,
