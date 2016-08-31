@@ -58,6 +58,7 @@ html {
     background: var(--darkBlue);
     font-size: 13px;
     padding: 0 24px;
+    display: none;
 }
 
 .sticky-nav a,
@@ -82,8 +83,9 @@ html {
 	position: absolute;
     height: 76px;
     background: var(--darkBlue);
+    flex-direction: row-reverse;
     /* Shift under gallery */
-    top: 180px;
+    top: 200px;
     z-index: 50;
     display: flex;
     align-items: center;
@@ -123,6 +125,8 @@ html {
 .site-content .page-header #license-plate .star-rating-wrapper {
     display: block;
     margin: 0;
+    font-size: 13px;
+    margin-bottom: 2px !important;
 }
 
 .site-content .page-header #license-plate #hotel-name {
@@ -146,11 +150,30 @@ html {
     margin: 0;
 }
 
+.site-content .photos-and-reviews {
+    margin-bottom: 76px;
+}
+
+.site-content .photos-and-reviews .jumbo-hero {
+    height: 200px;
+    padding-bottom: 0;
+}
+
 .site-content .photos-and-reviews .jumbo-hero .hero {
     margin: 0;
     width: 100%;
     object-fit: cover;
 }
+
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(2) {left: 100%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(3) {left: 200%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(4) {left: 300%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(5) {left: 400%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(6) {left: 500%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(7) {left: 600%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(8) {left: 700%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(9) {left: 800%; }
+.site-content .photos-and-reviews .jumbo-hero .hero:nth-child(10) {left: 900%; }
 
 .site-content .photos-and-reviews figcaption {
     display: none;
@@ -160,17 +183,19 @@ html {
 	display: none;
 }
 
-.site-content .jumbo-wrapper {
-	margin-bottom: 76px;
-}
-
-
 /* Rooms and rates */
 
 #rooms-and-rates {
 	border: 0;
     float: none;
     margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    border-radius: 0;
 }
 
 #rooms-and-rates #availability-header {
@@ -179,4 +204,119 @@ html {
 
 #rooms-and-rates .search-form {
 	margin: 0 !Important;
+}
+
+#rooms-and-rates .show-room-options {
+    display: none;
+}
+
+/* Rating bars */
+
+.ratings-new {
+	padding: 12px;
+}
+
+.ratings-new__title {
+	font-style: italic;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.ratings-new__row {
+    display: flex;	
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.ratings-new__label {
+	font-size: 13px;
+    display: block;
+    margin-bottom: 3px;
+    color: var(--darkBlue);
+}
+
+.ratings-new__bar {
+    height: 6px;
+    width: 100%;
+    background: var(--darkBlue);
+    position: relative;
+    overflow: hidden;
+}
+
+.ratings-new__bar:after {
+    display: block;
+    content: '';
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    transform: translateX(70%);
+    background: var(--lightBlue);
+}
+
+/* Date picker */
+
+.date-pickers-container {
+    display: flex;
+}
+
+#availability-wizard .datepicker {
+	flex: 1;
+    float: none;
+}
+
+@keyframes showCalendar {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#availability-wizard .datepicker-dropdown {
+    opacity: 0;
+    position: fixed !important;
+    width: 100%;
+    height: 310px;
+    padding: 0;
+    right: auto !important;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    left: 0 !important;
+    bottom: 133px !important;
+    width: 100vw;
+    background: #ffffff;
+    transform: translate3d(0,0,0);
+    animation: showCalendar 0.35s ease forwards;
+    z-index: 100;
+    margin: 0;
+}
+
+#availability-wizard .datepicker-dropdown .datepicker-cal {
+    padding-top: 32px;
+}
+
+#availability-wizard .datepicker-dropdown .datepicker-cal .btn-paging.btn-secondary {
+    top: 43px;
+}
+
+#availability-wizard .datepicker-dropdown .datepicker-close {
+    top: 0;
+    height: 32px;
+    line-height: 32px;
+}
+
+#availability-wizard .datepicker-arrow:after {
+	display: none !important;
+}
+
+.exp11120-1 #availability-wizard #availability-check-in-label,
+.exp11120-1 #availability-wizard #availability-check-out-label {
+    width: auto;
 }
